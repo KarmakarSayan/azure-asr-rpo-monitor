@@ -214,7 +214,7 @@ for fabric in fabrics:
                         print(f"Replication Health: {item.properties.replication_health}")
                         print(f"Status: {item.properties.protection_state}")
                         print(f"Active Location: {active_location}")
-                        print(f"RPO (Minutes): {rpo_minutes}")
+                        print(f"RPO (Hour): {rpo_hours}")
                         print(f"Failover Health: {item.properties.failover_health}")
                         print("-" * 80)
 
@@ -226,7 +226,7 @@ for fabric in fabrics:
                             <li><strong>Replication Health:</strong> {item.properties.replication_health}</li>
                             <li><strong>Status:</strong> {item.properties.protection_state}</li>
                             <li><strong>Active Location:</strong> {active_location}</li>
-                            <li><strong>RPO (Minutes):</strong> {rpo_minutes}</li>
+                            <li><strong>RPO (Hour):</strong> {rpo_hours}</li>
                             <li><strong>Failover Health:</strong> {item.properties.failover_health}</li>
                         </ul>
                         <hr>
