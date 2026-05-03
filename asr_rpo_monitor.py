@@ -186,7 +186,7 @@ for fabric in fabrics:
                     if rpo_seconds is None:
                         continue
 
-                    rpo_minutes = round(rpo_seconds / 60, 2)
+                    rpo_hours = round(rpo_seconds / 3600, 2)
 
                     active_location = getattr(
                         provider_details,
@@ -205,7 +205,7 @@ for fabric in fabrics:
                         active_location = item.properties.active_location
 
                     # Alert Condition
-                    if rpo_minutes >= 4 and replication_health == "critical":
+                    if rpo_hours >= 1 and replication_health == "critical":
                         found = True
 
                         print(f"VM Name: {vm_name}")
