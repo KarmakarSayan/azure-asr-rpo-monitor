@@ -46,5 +46,9 @@ jobs:
           MAIL_CLIENT_ID: ${{ secrets.MAIL_CLIENT_ID }}
           MAIL_CLIENT_SECRET: ${{ secrets.MAIL_CLIENT_SECRET }}
 
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+          CC_EMAILS: ${{ secrets.CC_EMAILS }}
+
         run: |
           python asr_rpo_monitor.py
