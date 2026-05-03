@@ -1,27 +1,27 @@
 from azure.identity import ClientSecretCredential
 from azure.mgmt.recoveryservicessiterecovery import SiteRecoveryManagementClient
 import requests
-
+import os
 # ---------------------------------------------------
 # ASR Service Principal Credentials (GitHub Secrets)
 # ---------------------------------------------------
-TENANT_ID = "${{ secrets.ASR_TENANT_ID }}"
-CLIENT_ID = "${{ secrets.ASR_CLIENT_ID }}"
-CLIENT_SECRET = "${{ secrets.ASR_CLIENT_SECRET }}"
+TENANT_ID = os.getenv("ASR_TENANT_ID")
+CLIENT_ID = os.getenv("ASR_CLIENT_ID")
+CLIENT_SECRET = os.getenv("ASR_CLIENT_SECRET")
 
 # ---------------------------------------------------
 # Microsoft Graph Mail Credentials (GitHub Secrets)
 # ---------------------------------------------------
-MAIL_TENANT_ID = "${{ secrets.MAIL_TENANT_ID }}"
-MAIL_CLIENT_ID = "${{ secrets.MAIL_CLIENT_ID }}"
-MAIL_CLIENT_SECRET = "${{ secrets.MAIL_CLIENT_SECRET }}"
+MAIL_TENANT_ID = os.getenv("MAIL_TENANT_ID")
+MAIL_CLIENT_ID = os.getenv("MAIL_CLIENT_ID")
+MAIL_CLIENT_SECRET = os.getenv("MAIL_CLIENT_SECRET")
 
 # ---------------------------------------------------
 # Email Configuration
 # ---------------------------------------------------
-SENDER_EMAIL = "CloudDesk@snp.com"
-RECEIVER_EMAIL = "sayan.karmakar@snp.com"
-CC_EMAILS = "manager1@snp.com,manager2@snp.com"
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
+RECEIVER_EMAIL = os.getenv("RECEIVER_EMAIL")
+CC_EMAILS = os.getenv("CC_EMAILS")
 
 # ---------------------------------------------------
 # Azure Vault Details
