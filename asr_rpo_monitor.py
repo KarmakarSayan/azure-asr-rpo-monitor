@@ -205,7 +205,7 @@ for fabric in fabrics:
                         active_location = item.properties.active_location
 
                     # Alert Condition
-                    if rpo_hours >= 2 and replication_health == "critical":
+                    if rpo_hours >= 4 and replication_health == "critical":
                         found = True
 
                         print(f"VM Name: {vm_name}")
